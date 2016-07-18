@@ -1,0 +1,3 @@
+#compdef wp
+
+_values "Waypoints" $(find $WAYPOINTS -type l -maxdepth 1 -exec basename {} \;)

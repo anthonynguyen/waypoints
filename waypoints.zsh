@@ -18,7 +18,7 @@ function dwp {
 
 function wps {
 	mkdir -p $WAYPOINTS
-	for f in $(find $WAYPOINTS -type l -maxdepth 1); do
-		echo $(basename $f) "->" $(readlink $f)
+	for f in $(find $WAYPOINTS -type l -maxdepth 1 -exec basename {} \;); do
+		echo $f "->" $(readlink "$WAYPOINTS/$f")
 	done
 }
