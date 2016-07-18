@@ -1,6 +1,6 @@
 # waypoints
 
-`waypoints` is a zsh script to save and navigate bookmarks, but for directories on your computer.
+`waypoints` is a zsh script to save and navigate bookmarks to directories on your computer.
 
 ### Installing
 Clone this repo with
