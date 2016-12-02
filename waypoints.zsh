@@ -3,7 +3,7 @@ export WAYPOINTS=$HOME/.waypoints
 function wp {
 	if [[ "$#" -ne 1 ]]; then
 		mkdir -p $WAYPOINTS
-		for f in $(find $WAYPOINTS -type l -maxdepth 1 -exec basename {} \;); do
+		for f in $(find $WAYPOINTS -maxdepth 1 -type l -exec basename {} \;); do
 			echo $f "->" $(readlink "$WAYPOINTS/$f")
 		done
 	else
