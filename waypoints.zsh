@@ -3,7 +3,7 @@ export WAYPOINTS=$HOME/.waypoints
 function wp {
 	mkdir -p $WAYPOINTS
 	if [[ "$#" -ne 1 ]]; then
-        show_wp | column -t
+        show_wp | sort | column -t
 	else
 		cd -P "$WAYPOINTS/$1" 2>/dev/null
 		if [[ $? -ne 0 ]]; then
